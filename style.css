@@ -1,0 +1,150 @@
+body {
+    background-color: #ffffff;
+    font-family: "Times New Roman", serif;
+}
+
+.image-text-container {
+    display: flex;
+    /* Habilita Flexbox */
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+}
+
+.figure {
+    margin: 0;
+    /* Remove margens padrão da figure */
+    margin-right: 20px;
+    /* Espaço entre a imagem e o texto */
+    max-width: 200px;
+    /* Define a largura máxima da imagem */
+}
+
+.figure-img {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse a largura da figure */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove espaços extras abaixo da imagem */
+}
+
+.text-side {
+    flex: 1;
+    /* Permite que o texto ocupe o espaço restante */
+}
+
+.avós-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os avôs */
+    align-items: flex-start;
+    gap: 20px;
+    /* Adiciona espaço entre os avôs */
+}
+
+.avô {
+    text-align: center;
+}
+
+.avô img {
+    width: 150px;
+    /* Define largura e altura iguais para criar um círculo */
+    height: 150px;
+    border-radius: 50%;
+    /* Torna a imagem redonda */
+    object-fit: cover;
+    /* Garante que a imagem preencha o círculo */
+    margin-bottom: 10px;
+}
+
+.info-avô {
+    font-size: 14px;
+}
+.filhos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filho {
+    text-align: center;
+    flex: 1 1 150px;
+}
+
+.filho img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.filho p {
+    font-size: 14px;
+    margin: 5px 0; /* Adiciona espaçamento vertical */
+}
+.popover-body img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+/* Estilos para dispositivos móveis (largura da tela menor que 768px, por exemplo) */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        /* Alinha os itens em coluna */
+    }
+
+    .figure {
+        margin: 0 auto 20px auto;
+        /* Centraliza a imagem e adiciona espaço abaixo */
+        max-width: 100%;
+        /* A imagem ocupa toda a largura */
+    }
+
+    .text-side {
+        flex: none;
+        /* Remove a flexibilidade */
+    }
+    .avós-container {
+        display: flex; /* Mantém o flexbox para manter as imagens lado a lado */
+        justify-content: space-around; /* Distribui o espaço entre os avós */
+        align-items: center; /* Centraliza verticalmente */
+        gap: 5px; /* Reduz o espaço entre os avós */
+    }
+
+    .avô {
+        flex: 1; /* Permite que os avôs se expandam igualmente */
+    }
+
+    .avô img {
+        width: 80px; /* Reduz o tamanho da imagem */
+        height: 80px; /* Reduz o tamanho da imagem */
+        margin-bottom: 5px;
+    }
+
+    .info-avô {
+        font-size: 10px; /* Reduz o tamanho do texto */
+    }
+    .filhos-container {
+        gap: 10px;
+    }
+
+    .filho {
+        flex: 1 1 100px;
+    }
+
+    .filho img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .filho p {
+        font-size: 12px;
+    }
+    
+}
