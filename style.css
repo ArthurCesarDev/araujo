@@ -36,10 +36,9 @@ body {
 .avós-container {
     display: flex;
     justify-content: center;
-    /* Centraliza os avôs */
     align-items: flex-start;
     gap: 20px;
-    /* Adiciona espaço entre os avôs */
+    position: relative; /* Adicionado para posicionar a linha */
 }
 
 .avô {
@@ -59,6 +58,16 @@ body {
 
 .info-avô {
     font-size: 14px;
+}
+.avós-container::after {
+    content: '';
+    position: absolute;
+    width: 100px; /* Comprimento da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #000; /* Cor da linha */
+    top: 75px; /* Ajuste vertical para o centro das imagens */
+    left: 50%; /* Centraliza a linha horizontalmente */
+    transform: translateX(-60%); /* Ajuste fino para centralização */
 }
 .filhos-container {
     display: flex;
@@ -84,13 +93,7 @@ body {
     font-size: 14px;
     margin: 5px 0; /* Adiciona espaçamento vertical */
 }
-.popover-body img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 5px;
-}
+
 
 /* Estilos para dispositivos móveis (largura da tela menor que 768px, por exemplo) */
 @media (max-width: 768px) {
@@ -145,6 +148,16 @@ body {
 
     .filho p {
         font-size: 12px;
+    }
+    .avós-container::after {
+        content: '';
+        position: absolute;
+        width: 100px; /* Comprimento da linha */
+        height: 2px; /* Espessura da linha */
+        background-color: #000; /* Cor da linha */
+        top: 43px; /* Ajuste vertical para o centro das imagens */
+        left: 50%; /* Centraliza a linha horizontalmente */
+        transform: translateX(-60%); /* Ajuste fino para centralização */
     }
     
 }
