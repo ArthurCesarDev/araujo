@@ -59,16 +59,7 @@ body {
 .info-avô {
     font-size: 14px;
 }
-.avós-container::after {
-    content: '';
-    position: absolute;
-    width: 100px; /* Comprimento da linha */
-    height: 2px; /* Espessura da linha */
-    background-color: #000; /* Cor da linha */
-    top: 75px; /* Ajuste vertical para o centro das imagens */
-    left: 50%; /* Centraliza a linha horizontalmente */
-    transform: translateX(-60%); /* Ajuste fino para centralização */
-}
+
 .filhos-container {
     display: flex;
     justify-content: center;
@@ -149,15 +140,6 @@ body {
     .filho p {
         font-size: 12px;
     }
-    .avós-container::after {
-        content: '';
-        position: absolute;
-        width: 100px; /* Comprimento da linha */
-        height: 2px; /* Espessura da linha */
-        background-color: #000; /* Cor da linha */
-        top: 43px; /* Ajuste vertical para o centro das imagens */
-        left: 50%; /* Centraliza a linha horizontalmente */
-        transform: translateX(-60%); /* Ajuste fino para centralização */
-    }
+  
     
 }
