@@ -84,7 +84,10 @@ body {
     font-size: 14px;
     margin: 5px 0; /* Adiciona espaçamento vertical */
 }
-
+.fixed-height-image {
+    height: 400px; /* Defina a altura desejada */
+    object-fit: cover;
+}
 
 /* Estilos para dispositivos móveis (largura da tela menor que 768px, por exemplo) */
 @media (max-width: 768px) {
@@ -140,6 +143,6 @@ body {
     .filho p {
         font-size: 12px;
     }
-  
+   
     
 }
